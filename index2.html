@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>极简学校首页</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* 头部 */
+.header {
+  background: #003366;
+  color: white;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav {
+  display: flex;
+  gap: 16px;
+}
+
+/* 内容区 */
+.content {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+}
+.main {
+  flex: 2;
+  background: #f5f5f5;
+  padding: 20px;
+}
+.side {
+  flex: 1;
+  background: #f5f5f5;
+  padding: 20px;
+}
+
+/* 底部 */
+.footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 16px;
+}
+</style>
+</head>
+
+<body>
+<div class="header">
+  <div>学校LOGO</div>
+  <div class="nav">
+    <div>首页</div>
+    <div>新闻</div>
+    <div>学院</div>
+    <div>联系我们</div>
+  </div>
+</div>
+
+<div class="content">
+  <div class="main">校园新闻</div>
+  <div class="side">通知公告</div>
+</div>
+
+<div class="footer">版权所有 © 学校名称</div>
+</body>
+</html>
