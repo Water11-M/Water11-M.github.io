@@ -1,59 +1,241 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>梁艺淼简历</title>
-    <style>
-        h1
-        .center{
-            text-align: center;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>梁艺淼 - 个人简历</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Microsoft YaHei", sans-serif;
+}
 
-        a{
-            text-decoration: none;
-            color: rgb(100,124,231);
-        }
+body {
+  background: #fff;
+  padding: 20px;
+}
 
-        h3{
-            background-color: rgb(100,124,231);
-            color: white;
-            line-height: 40px;
-            padding-left: 10px;
-            margin-top: 40px;
-            border-radius: 5px;
-            box-shadow: 10px 10px 10px #000;
-        }
-        .container{
-            width: 960px;
-            margin: 0 auto;
-        }
-    </style>
+/* 最外层 flex 容器：左 + 右 */
+.container {
+  display: flex;
+  gap: 2px;
+  max-width: 1100px;
+  margin: 0 auto;
+  background: #ddd;
+  border: 1px solid #ccc;
+}
+
+/* 左侧栏 */
+.left {
+  width: 240px;
+  background: #e6f0fa;
+  padding: 20px;
+}
+
+/* 右侧整体：上下 flex */
+.right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+/* 右侧上：中间 + 项目经历 flex 横向 */
+.right-top {
+  display: flex;
+  gap: 2px;
+}
+
+/* 中间：核心优势 */
+.middle {
+  flex: 1;
+  background: #fff;
+  padding: 20px;
+}
+
+/* 右侧上2：项目经历 */
+.right-top-right {
+  flex: 1;
+  background: #fff;
+  padding: 20px;
+}
+
+/* 右侧下：教育背景 */
+.right-bottom {
+  background: #fff;
+  padding: 20px;
+}
+
+/* 标题样式 */
+.title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #1a3c7d;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+.title::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #ccc;
+  margin-left: 10px;
+}
+
+/* 照片 */
+.avatar {
+  width: 180px;
+  height: 220px;
+  background: #fff;
+  margin: 0 auto 15px;
+}
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 信息行 */
+.info {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+/* 求职意向 */
+.job {
+  margin-top: 25px;
+  font-size: 17px;
+  font-weight: bold;
+  color: #1a3c7d;
+}
+
+/* 列表项目 */
+.item {
+  margin-bottom: 18px;
+  padding-left: 20px;
+  position: relative;
+}
+.item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #1a73e8;
+}
+
+.item-name {
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+ul {
+  list-style: none;
+}
+li {
+  margin-bottom: 4px;
+  padding-left: 12px;
+  position: relative;
+}
+li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #1a73e8;
+}
+
+/* 链接样式 */
+.link {
+  margin-top: 20px;
+  text-align: center;
+}
+.link a {
+  color: #1a73e8;
+  font-weight: bold;
+  text-decoration: none;
+}
+</style>
 </head>
 
 <body>
-    <h1>梁艺淼</h1>
-    <img src="2780.jpg_wh860.jpg" alt="水">
-    <a href="form.html">简历</a>
-    <hr>
-    <ul>
-        <li><b>性别：</b>女</li>
-        <li><b>生日：</b>2006.1.1.</li>
-        <li><b>兴趣：</b>舞蹈；篮球</li>
-    </ul>
-    <hr>
-    <h3>教育背景</h3>
-    <table border="1" width="100%" cellspacing=0>
-        <tr>
-            <td>时间</td>
-            <td>学校</td>
-            <td>职务</td>
-        </tr>
-        <tr>
-            <td>2024.9</td>
-            <td>上海对外经贸大学</td>
-            <td>学生</td>    
-        </tr>
-    </table>
+<div class="container">
+
+  <!-- 左侧：个人信息 -->
+  <div class="left">
+    <div class="title">个人信息</div>
+    <div class="avatar">
+      <img src="https://via.placeholder.com/180x220?text=照片" alt="证件照">
+    </div>
+    <div class="info">姓名: 梁艺淼</div>
+    <div class="info">电话: 131********</div>
+    <div class="info">邮箱: water_239299****@qq.com</div>
+    <div class="info">地址: 上海对外经贸大学学生社区600弄</div>
+    <div class="job">
+      求职意向:<br>
+
+    </div>
+
+    <!-- 放学校网站页面链接 -->
+    <div class="link">
+      <a href="index2.html">→ 学校网站布局作业</a>
+    </div>
+  </div>
+
+  <!-- 右侧整体 -->
+  <div class="right">
+    <div class="right-top">
+      <!-- 中间：核心优势 -->
+      <div class="middle">
+        <div class="title">核心优势</div>
+        <div class="item">
+          <div class="item-name">1. 专业背景</div>
+          <div>信息管理与信息系统本科生，熟练掌握Excel、Python等电脑操作。</div>
+        </div>
+        <div class="item">
+          <div class="item-name">2. 技能证书</div>
+          <div>英语四六级通过，可日常英语交流。</div>
+        </div>
+        <div class="item">
+          <div class="item-name">3. 实践能力</div>
+          <ul>
+            <li>熟练使用Excel</li>
+            <li>英语日常交流</li>
+            <li>掌握Python/C语言基础</li>
+            <li>数据透析与分析</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 右上：项目经历 -->
+      <div class="right-top-right">
+        <div class="title">项目经历</div>
+        <div class="item">
+          <div class="item-name">Lululemon 兼职 | 市场部实习生 | 2025.3-2025.6</div>
+          <div>职责：楼面营销、产品销售</div>
+          <div>成果：达成目标，维护顾客粘性</div>
+        </div>
+        <div class="item">
+          <div class="item-name">品牌销售</div>
+          <div>职责：市场营销、客户维护、产品推广</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 右下：教育背景 -->
+    <div class="right-bottom">
+      <div class="title">教育背景</div>
+      <div style="line-height:1.8;">
+        上海对外经贸大学 | 本科 | 信息管理与信息系统<br>
+        主修：Python、C语言、数据库管理等
+      </div>
+    </div>
+  </div>
+
+</div>
 </body>
 </html>
